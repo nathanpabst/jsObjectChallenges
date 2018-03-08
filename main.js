@@ -84,3 +84,28 @@ var winnerList = [
     }
 // console.log(countWins(winnerList, 'Portugal'));
 document.getElementById("challenge-2").innerHTML += '<h2>' + countWins(winnerList, 'Spain') + '</h2>';
+
+//******************CHALLENGE 3*************/
+
+// Given an object containing two numbers and an arithmetic operator, return the appropriate math result.
+
+// The four operators are "add", "subtract", "divide", "multiply".
+
+var test1 = {a: 5, b: 2, operator: "add"};  //7
+// // var test1 = {a: 5, b:2, operator: "subtract"}; //3
+// // var test1 = {a: 5, b:2, operator: "multiply"}; //10
+// // var test1 = {a: 5, b:2, operator: "divide"}; //2.5
+
+function mathIt(a, b, operator) {
+    const cases = {
+        add: (a, b) => a + b,
+        subtract: (a, b) => a - b,
+        multiply: (a, b) => a * b,
+        divide: (a, b) => a / b
+    }
+
+ return cases[operator](a, b);    
+}
+// console.log(mathIt(5, 2, 'add'));
+
+document.getElementById("challenge-3").innerHTML += '<h2>' + mathIt(5, 2, 'add') + '</h2>';
